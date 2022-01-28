@@ -10,13 +10,13 @@ namespace task_5_3_1
             Console.Write("Введите свой возраст: ");
             age = int.Parse(Console.ReadLine());
 
-            ChangeAge(age);
+            ChangeAge(ref age);
             Console.WriteLine(age);
 
             Console.ReadKey();
         }
         
-        static int ChangeAge(int age)
+        static int ChangeAge(ref int age)
         {
             age = 27;
             return age;
