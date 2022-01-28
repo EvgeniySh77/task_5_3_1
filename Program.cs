@@ -4,22 +4,21 @@ namespace task_5_3_1
 {
     class Program
     {
+        static void BigDataOperation(in int[] arr)
+        {
+            arr[0] = 27;           
+        }
         static void Main()
         {
-            int age;
-            Console.Write("Введите свой возраст: ");
-            age = int.Parse(Console.ReadLine());
+            int[] arr = new int[] {1, 2, 3};
+            
+            Console.WriteLine(arr[0]);
 
-            ChangeAge(ref age);
-            Console.WriteLine(age);
+            BigDataOperation(in arr);
+            
+            Console.WriteLine(arr[0]);
 
             Console.ReadKey();
-        }
-        
-        static int ChangeAge(ref int age)
-        {
-            age = 27;
-            return age;
-        }
+        }       
     }
 }
